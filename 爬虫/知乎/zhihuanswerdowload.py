@@ -117,4 +117,6 @@ if __name__ == '__main__':
     keyword = '5G 信号'  ## 多个关键词用空格隔开
     num = 0  ## 问题数量限制,若没有限制，则取0
     save_path = '../知乎下载/'
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
     GetAnswer(Question_ID, keyword, num, save_path)
